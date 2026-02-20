@@ -1,0 +1,614 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', 'Arial', sans-serif; /* Using a heavier stack for that bold look */
+}
+
+/* Header Layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    /*max-width: 1305px;*/
+
+    margin: 0 auto;
+    padding: 20px 0; /* Adjusted padding for a tighter sticky feel */
+
+    /* --- Sticky Logic Start --- */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures it stays above the hero and form sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow when scrolling */
+    /* --- Sticky Logic End --- */
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+/* Logo Styling */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 900;
+    color: #00334e;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.logo-icon {
+    color: #ff6a00;
+    font-size: 26px;
+    margin-left: 4px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+/* Phone/CTA Styling */
+.cta-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.call-now {
+    font-weight: 900;
+    color: #00334e;
+    font-size: 14px;
+}
+
+.phone-number {
+    font-weight: 900;
+    color: #ff6a00;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+.promo-bar {
+    background-color: #005a7d;
+    color: #ffffff;
+    padding: 12px 10%; 
+    display: flex;
+    justify-content: center; /* Changed from flex-end to center */
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.promo-text {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .promo-bar {
+        justify-content: center; /* Centers text on smaller screens */
+        text-align: center;
+    }
+}
+
+/* Hero Section Wrapper */
+.hero-section {
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1205px; /* Matches your header width */
+    margin: 0 auto;
+    padding: 60px 0; /* Vertical breathing room */
+}
+
+/* Typography Styling */
+.hero-text-content {
+    flex: 1;
+}
+
+.hero-headline {
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    font-size: 54px; /* Large, impactful size */
+    font-weight: 900;
+    line-height: 1.1;
+    color: #00334e; /* The specific dark navy */
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.accent-bar {
+    width: 90px;
+    height: 8px;
+    background-color: #ff6a00; /* The Endurance orange */
+    margin-top: 30px;
+}
+
+/* Image Styling */
+.hero-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-car {
+    max-width: 110%; /* Slight overflow for a more dynamic look if desired */
+    height: auto;
+}
+
+/* Responsive Scaling for Tablets/Phones */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-headline {
+        font-size: 38px;
+    }
+
+    .accent-bar {
+        margin: 25px auto 0; /* Centers the orange bar on mobile */
+    }
+
+    .hero-image-box {
+        margin-top: 40px;
+        justify-content: center;
+    }
+}
+/* Layout Container */
+.main-content {
+    background-color: #f9f9f9; /* Light grey background from screenshot */
+    padding: 60px 0;
+}
+
+.content-wrapper {
+    display: flex;
+    max-width: 1305px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+/* Trust Column Styles */
+.trust-column {
+    flex: 1.2;
+    text-align: center;
+}
+
+.section-title {
+    color: #00334e;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.icon-item p {
+    font-size: 18px;
+    color: #00334e;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 15px;
+}
+
+.as-seen-title {
+    font-size: 22px;
+    color: #00334e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: grayscale(100%); /* Optional: matches the muted look in some designs */
+    opacity: 0.8;
+}
+
+/* Quote Form Card Styles */
+.form-column {
+    flex: 1;
+}
+
+.quote-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #00334e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: -6em;
+}
+
+.quote-card h3 {
+    color: #00334e;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.form-subtitle {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: #00334e;
+    margin: 15px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #ff6a00;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e65f00;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-phone {
+    color: #ff6a00;
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .icon-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.icon-item img{
+    width: 130px;
+}
+.quote-card p{
+    
+    color:#94a3b8;
+    font-weight: 200;
+    font: 18px GT-America, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.5;
+}
+/*as seen*/
+.as-seen-on-section {
+    background-color: #efefef; /* Light grey background */
+    width: 100%;
+    padding: 2em 0;
+    margin-top: -15em;
+}
+
+.as-seen-grid {
+    display: grid;
+    /* This creates two equal columns */
+    grid-template-columns: 1fr 1fr; 
+    max-width: 1305px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.as-seen-content-left {
+    /* Ensures content stays aligned to the left of its column */
+    text-align: left; 
+}
+
+.as-seen-title {
+    font-family: GT-America, Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #00334e;
+    font-size: 36px;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-top:0px;
+}
+
+.logo-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows logos to wrap within the left column */
+    gap: 30px;
+    align-items: center;
+}
+
+.logo-list img {
+    max-height: 117px;
+    width: auto;
+    max-width: 105px;
+}
+
+/* This column is intentionally kept empty to create the huge space on the right */
+.as-seen-empty-right {
+    display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .as-seen-grid {
+        /* On mobile, we stack them so the "huge space" disappears */
+        grid-template-columns: 1fr; 
+    }
+    
+    .as-seen-empty-right {
+        display: none;
+    }
+}
+.form-footer .desc{
+    font-size: 12px;
+}
+/*repair cost section*/
+/* Repair Cost Section - Corrected Slant Direction */
+.repair-costs-section {
+    background-color: #002a3a;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.repair-container {
+    max-width: 1706px;
+    /*margin: 0 auto;*/
+    margin-left: auto;
+    padding: 0 0px;
+}
+
+.repair-title {
+    color: #ffffff;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.comparison-row {
+    display: flex;
+    /* Corrected Angle: 75deg creates the forward slant from the top-right to bottom-left */
+    background: linear-gradient(60deg, #002a3a 50%, #fd7f20 calc(50% + 1px), #ffb75b 110%);
+    min-height: 250px;
+    border-radius: 4px;
+    color: white;
+    border-top: 1px solid #fd7f20;
+}
+
+.cost-left-content {
+    flex: 6; 
+    padding: 40px 60px;
+}
+
+.cost-right-content {
+    flex: 6;
+    padding: 40px 60px 40px 100px; /* Increased left padding to account for the slant */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cost-heading {
+    font-size: 22px;
+    margin: 0 0 25px 0;
+    /* Added the thin white line style from screenshot */
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 80%; /* Adjusted to match reference line length */
+}
+
+.cost-flex-row {
+    display: flex;
+    gap: 50px;
+}
+
+.cost-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.part-name {
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.part-price {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+/* Right Side Styling */
+.total-flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.total-text {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.total-amount {
+    font-size: 52px;
+    font-weight: 900;
+}
+
+/* Chevron arrows seen in the reference image */
+/* Chevron arrows pointing LEFT */
+.total-flex::after {
+    content: ">>>";
+    font-family: 'Arial Black', sans-serif;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.25);
+    font-style: italic;
+    letter-spacing: -6px;
+    margin-left: 15px;
+    
+    /* This flips the arrows to point left */
+    display: inline-block;
+    transform: scaleX(-1); 
+    
+    /* Vertical alignment tweak */
+    line-height: 1;
+    position: relative;
+    top: 5px;
+}
+
+/* Mobile Fix - Stacks colors vertically */
+@media (max-width: 992px) {
+    .comparison-row {
+        flex-direction: column;
+        background: #002b3d;
+    }
+    .cost-right-content {
+        background: #ff8c2d;
+        padding: 40px;
+    }
+}
+.total{
+    font-size: 1.5em;
+    margin-top: 1.5em;
+}
+/*footer section*/
+.footer-section {
+    background-color: #f1f1f1;
+    padding: 60px 0 40px;
+    font-family: Arial, sans-serif;
+    color: #4b5563; /* Muted text color */
+}
+
+.footer-container {
+    max-width: 1305px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #ff6a00; /* Endurance Orange accent line */
+    margin: 0 0 40px 0;
+}
+
+.footer-main-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-disclosure {
+    flex: 3;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.footer-socials img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(21%) saturate(2283%) hue-rotate(167deg) brightness(93%) contrast(101%); /* Matches your dark navy */
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+}
+
+.footer-links a {
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .footer-main-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-socials {
+        justify-content: flex-start;
+    }
+
+    .footer-links {
+        justify-content: center;
+        text-align: center;
+    }
+    .as-seen-on-section{
+        margin-top:0px;
+    }
+}
+
+
