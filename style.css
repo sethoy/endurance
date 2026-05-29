@@ -611,4 +611,11 @@ input, select {
     }
 }
 
-
+.entire-page-link {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    text-decoration: none; /* Keeps your text from turning blue/underlined */
+    color: inherit;         /* Keeps your original text colors intact */
+    cursor: pointer;
+}
